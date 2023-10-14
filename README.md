@@ -56,3 +56,11 @@ scheduler.RemoveJob(id: 2);
 or you can remove all jobs from the scheduler using `scheduler.RemoveAllJobs()`.
 
 ## Future Improvements
+
+### Specs Improvements
+- Support Job running at a certain minute, or hour. day, day of week, day of month, etc.
+- Support running scripts in new processes instead of threads in the same process in the same address space.
+### Code Improvements
+- Ensure the scheduler class's thread safety by securing the priority queue with thread-safe mechanisms.
+- Use interfaces and Dependency injection so classes are more decoupled, flexible, and can be better unit tested.
+- Log to files and use these files to recover if the scheduler crashes and is restored.
